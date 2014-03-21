@@ -1,0 +1,40 @@
+{
+  "name": "rhtmlify",
+  "description": "Raptor Templates transform for Browserify",
+  "keywords": [
+    "browserify",
+    "raptor-templates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raptorjs3/rhtmlify.git"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test"
+  },
+  "author": "Patrick Steele-Idem <pnidem@gmail.com>",
+  "contributors": [
+    "Patrick Steele-Idem <pnidem@gmail.com>",
+    "Phillip Gates-Idem <phillip.idem@gmail.com>"
+  ],
+  "maintainers": "Patrick Steele-Idem <pnidem@gmail.com>",
+  "dependencies": {
+    "raptor-templates": "^0.2.12-beta",
+    "through": "^2.3.4",
+    "esprima": "^1.0.4",
+    "escodegen": "^1.3.0",
+    "estraverse": "^1.5.0",
+    "raptor-async": "^0.2.2-beta"
+  },
+  "devDependencies": {
+    "mocha": "~1.15.1",
+    "chai": "~1.8.1"
+  },
+  "license": "Apache License v2.0",
+  "bin": {},
+  "main": "lib/rhtmlify.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "0.1.0-beta"
+}
