@@ -26,7 +26,7 @@ Hello ${data.name}!
 __my-project/main.js:__
 
 ```javascript
-var template = require('marko').load(require.resolve('./template.marko'));
+var template = require('./template.marko');
 template.render({
         name: 'World'
     },
@@ -62,12 +62,12 @@ Output: Hello World!
 
 # Further Reading
 
-* [Marko](https://github.com/raptorjs/marko)
-* [RaptorJS Optimizer](https://github.com/raptorjs/optimizer) (alternative to Browserify)
+* [Marko](https://github.com/marko-js/marko)
+* [Lasso.js](https://github.com/lasso-js/lasso) (alternative to Browserify)
 
 # Discuss
 
-Please post questions or comments on the [RaptorJS Google Groups Discussion Forum](http://groups.google.com/group/raptorjs).
+If you have any questions or run into any problems, please reach out to us in the [Marko Gitter chat room](https://gitter.im/marko-js/marko) or open a Github issue.
 
 # Contributors
 
