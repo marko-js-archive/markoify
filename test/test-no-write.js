@@ -7,6 +7,8 @@ var browserify = require('browserify');
 
 var compiler = require('marko/compiler');
 
+compiler.defaultOptions.writeToDisk = false;
+
 describe('markoify', function() {
     it('should handle require of a marko template', function(done) {
 
@@ -23,7 +25,7 @@ describe('markoify', function() {
                     output += data;
                 },
                 function end() {
-                    expect(output).to.contain('require("marko").c(');
+                    expect(output).to.contain('require(\'marko\').c(');
 
                     eval(output);
                     expect(global.templateOutput).to.equal('<div>Hello Frank!</div>');
@@ -46,8 +48,8 @@ describe('markoify', function() {
                     output += data;
                 },
                 function end() {
-                    expect(output).to.contain("require('./template.marko.js')");
-                    expect(output).to.contain('require("marko").c(');
+                    expect(output).to.contain("require('./template.marko')");
+                    expect(output).to.contain('require(\'marko\').c(');
 
                     eval(output);
                     expect(global.templateOutput).to.equal('<div>Hello Jane!</div>');
@@ -69,8 +71,8 @@ describe('markoify', function() {
                     output += data;
                 },
                 function end() {
-                    expect(output).to.contain("require('./template.marko.js')");
-                    expect(output).to.contain('require("marko").c(');
+                    expect(output).to.contain("require('./template.marko')");
+                    expect(output).to.contain('require(\'marko\').c(');
 
                     eval(output);
                     expect(global.templateOutput).to.equal('<div>Hello John!</div>');
