@@ -10,7 +10,8 @@
     "url": "https://github.com/marko-js/markoify.git"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test"
+    "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test/test.js",
+    "test:no-write": "node_modules/.bin/mocha --ui bdd --reporter spec ./test/test-no-write.js"
   },
   "author": "Patrick Steele-Idem <pnidem@gmail.com>",
   "contributors": [
