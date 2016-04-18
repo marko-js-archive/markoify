@@ -5,6 +5,8 @@ var path = require('path');
 var through = require('through');
 var browserify = require('browserify');
 
+var compiler = require('marko/compiler');
+
 describe('markoify', function() {
     it('should handle require of a marko template', function(done) {
 
@@ -24,7 +26,7 @@ describe('markoify', function() {
                     expect(output).to.contain('require("marko").c(');
 
                     eval(output);
-                    expect(global.templateOutput).to.equal('Hello Frank!');
+                    expect(global.templateOutput).to.equal('<div>Hello Frank!</div>');
                     done();
                 }));
     });
@@ -48,7 +50,7 @@ describe('markoify', function() {
                     expect(output).to.contain('require("marko").c(');
 
                     eval(output);
-                    expect(global.templateOutput).to.equal('Hello Jane!');
+                    expect(global.templateOutput).to.equal('<div>Hello Jane!</div>');
                     done();
                 }));
     });
@@ -71,7 +73,7 @@ describe('markoify', function() {
                     expect(output).to.contain('require("marko").c(');
 
                     eval(output);
-                    expect(global.templateOutput).to.equal('Hello John!');
+                    expect(global.templateOutput).to.equal('<div>Hello John!</div>');
                     done();
                 }));
     });
