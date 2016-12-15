@@ -23,7 +23,6 @@
     "escodegen": "^1.8.0",
     "esprima": "^2.7.2",
     "estraverse": "^4.2.0",
-    "marko": "^3.1.5",
     "raptor-async": "^1.1.2",
     "through": "^2.3.8"
   },
@@ -35,7 +34,7 @@
   },
   "license": "Apache License v2.0",
   "bin": {},
-  "main": "lib/markoify.js",
+  "main": "src/index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

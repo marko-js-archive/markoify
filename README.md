@@ -12,7 +12,7 @@ npm install markoify --save
 # Usage:
 
 ```bash
-browserify -t markoify main.js > browser.js
+browserify -t markoify --extension=".marko" main.js -o browser.js
 ```
 
 # Example
@@ -33,10 +33,6 @@ template.render({
     function(err, output) {
         console.log('Output: ', output)
     });
-```
-
-```bash
-browserify -t markoify main.js > browser.js
 ```
 
 Page HTML:
@@ -69,7 +65,7 @@ Output: Hello World!
 
 If you have any questions or run into any problems, please reach out to us in the [Marko Gitter chat room](https://gitter.im/marko-js/marko) or open a Github issue.
 
-# Contributors
+# Maintainers
 
 * [Patrick Steele-Idem](https://github.com/patrick-steele-idem) (Twitter: [@psteeleidem](http://twitter.com/psteeleidem))
 
