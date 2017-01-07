@@ -59,7 +59,9 @@ module.exports = function transform(file) {
         function(end) {
             if (/.marko$/.test(file)) {
                 if (compiler.compileForBrowser) {
-                    input = compiler.compileForBrowser(input, file);
+                    var compiled = compiler.compileForBrowser(input, file);
+                    // TODO Do something with compiled.dependencies
+                    input = compiled.code;
                 } else {
                     input = compiler.compile(input, file);
                 }
