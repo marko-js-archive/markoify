@@ -7,6 +7,14 @@ var estraverse = require('estraverse');
 var parseOpts = {};
 var through = require('through');
 var compiler = require('marko/compiler');
+var minprops = require('minprops');
+
+var isDevelopment =
+    !process.env.NODE_ENV ||
+    process.env.NODE_ENV === 'development' ||
+    process.env.NODE_ENV === 'dev';
+
+var minpropsEnabled = !isDevelopment;
 
 function transformAST(file, input, callback) {
     var ast = esprima.parse(input, parseOpts);
@@ -64,6 +72,10 @@ module.exports = function transform(file) {
                     input = compiled.code;
                 } else {
                     input = compiler.compile(input, file);
+                }
+            } else {
+                if (minpropsEnabled) {
+                    input = minprops(input, file);
                 }
             }
 

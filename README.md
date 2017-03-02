@@ -12,7 +12,7 @@ npm install markoify --save
 # Usage:
 
 ```bash
-browserify -t markoify --extension=".marko" main.js -o browser.js
+browserify -g markoify --extension=".marko" main.js -o browser.js
 ```
 
 # Example
