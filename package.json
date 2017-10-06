@@ -30,7 +30,7 @@
     "browserify": "^14.0.0",
     "chai": "^4.0.2",
     "marko": "^4.0.0-rc.24",
-    "mocha": "^3.2.0"
+    "mocha": "^4.0.1"
   },
   "license": "Apache-2.0",
   "bin": {},
