@@ -20,7 +20,7 @@
   ],
   "maintainers": "Patrick Steele-Idem <pnidem@gmail.com>",
   "dependencies": {
-    "escodegen": "^1.8.0",
+    "escodegen": "^1.10.0",
     "esprima": "^4.0.0",
     "estraverse": "^4.2.0",
     "minprops": "^1.0.0",
