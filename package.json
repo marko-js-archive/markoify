@@ -29,7 +29,7 @@
   "devDependencies": {
     "browserify": "^14.0.0",
     "chai": "^4.0.2",
-    "marko": "^4.0.0-rc.24",
+    "marko": "^4.14.1",
     "mocha": "^3.2.0"
   },
   "license": "Apache-2.0",
