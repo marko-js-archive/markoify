@@ -1,3 +1,5 @@
+# Using Marko with browserify is no longer supported, [please see the docs](https://markojs.com/docs/bundler-integrations-overview/) for our current list of supported bundlers.
+
 markoify
 ========
 
